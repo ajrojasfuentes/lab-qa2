@@ -64,9 +64,10 @@ describe('Library', () => {
    * Nombre de la prueba: Agregar un libro con título vacío
    * Objetivo: Verificar que se puede agregar un libro con un título vacío a la biblioteca.
    * Datos de prueba: Libro con título vacío y autor "Antoine de Saint-Exupéry".
-   * Resultado esperado: El libro se agrega a la biblioteca con el título vacío, aunque se podría considerar un error en el diseño.
+   * Resultado esperado: El libro se agrega a la biblioteca con el título vacío.
    * Comentario: Aunque el programa permite agregar un libro con un título vacío, esto podría ser considerado un error, sin embargo, 
-   * desconozco los requerimientos específicos del programa, y por ende no puedo corroborar que se trate de un error y no de un feature.
+   * desconozco los requerimientos específicos del programa, y por ende no puedo corroborar que se trate de un error y no de un feature,
+   * así que me limité a realizar una prueba para demostrar este comportamiento del programa.
    */
   it('3. Agregar un libro con título vacío', function () {
     let libreria = new Library();
@@ -84,7 +85,7 @@ describe('Library', () => {
 
   /**
    * Nombre de la prueba: Buscar un libro con autor no registrado
-   * Objetivo: Verificar que no se puede encontrar un libro cuyo autor no está registrado en la biblioteca.
+   * Objetivo: Verificar que al buscar el nombre de un autor que no está registrado en la biblioteca, la busqueda no arroje ningún libro.
    * Datos de prueba: Libro con autor "Autor Desconocido".
    * Resultado esperado: No se encuentra ningún libro en la biblioteca al buscar por un autor que no existe.
    */
